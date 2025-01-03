@@ -11,6 +11,18 @@
 
 <img src="doc/demo.gif" width="100%" alt="知识星球">
 
+# 数据集介绍
+
+## 数据内容包括：
+
+* 1）rgb 图像 （rgb image）
+* 2）深度点云图像 (depth image)
+* 3）手21三维和二维关键点 (21 3d & 2d joints)
+* 4）手三维和二维mesh网格点 (3d & 2d mesh )
+* 5）相机内参 (camera Intrinsics : fx, fy, cx, cy)
+* 6）静态手势 (gesture)
+* 7)  手部mask （hand mask）
+
 # 数据集解析
 
 ```bash
