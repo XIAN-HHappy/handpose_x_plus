@@ -11,7 +11,7 @@
 
 <img src="doc/demo.gif" width="100%" alt="知识星球">
 
-# 数据集介绍
+# 一、数据集介绍
 
 ## 数据内容包括：
 
@@ -23,7 +23,7 @@
 * 6）静态手势 (gesture)
 * 7)  手部mask （hand mask）
 
-# 数据集解析
+# 二、数据集解析
 
 ```bash
 python read_datas.py
