@@ -21,7 +21,7 @@
 * 4）手三维和二维mesh网格点 (3d & 2d mesh )
 * 5）相机内参 (camera Intrinsics : fx, fy, cx, cy)
 * 6）静态手势 (gesture)
-* 7)  手部mask （hand mask）
+* 7）手部mask （hand mask）
 
 # 二、数据集解析
 
