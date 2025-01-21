@@ -15,23 +15,22 @@ if __name__ == '__main__':
     ok_cnt = 0
     Flag_check_error = False
     for doc_  in os.listdir(path_s):
-        # if "output-enjoy0000153" not in doc_:
-        #     continue
+
         path_root  = path_s + doc_ + "/"
         for f_ in os.listdir(path_root):
             if ".png" not in f_:
                 continue
             name_x = f_.replace("_depth.png","")
             path_depth = path_root + f_
-            path_mesh = path_root + f_.replace("_depth.png","_Mesh.obj")
-            path_joint = path_root + f_.replace("_depth.png","_Joint.obj")
-            path_intrinsics = path_root + f_.replace("_depth.png","_intrinsics.txt")
-            path_gesture = path_root + f_.replace("_depth.png","_gesture.txt")
-            path_img = path_root + f_.replace("_depth.png","_o.jpg")
-            path_fusion = path_root + f_.replace("_depth.png","_fusion.jpg")
-            path_skl = path_root + f_.replace("_depth.png","_fit2d.jpg")
+            path_mesh = path_root + f_.replace("_depth.png","_Mesh.obj") # 网格点数据
+            path_joint = path_root + f_.replace("_depth.png","_Joint.obj") # 21 关键点数据
+            path_intrinsics = path_root + f_.replace("_depth.png","_intrinsics.txt") # 相机内参数据
+            path_gesture = path_root + f_.replace("_depth.png","_gesture.txt") # 手势数据
+            path_img = path_root + f_.replace("_depth.png","_o.jpg") # RGB 图像数数据
+            path_fusion = path_root + f_.replace("_depth.png","_fusion.jpg") # 可视化3d效果渲染数据
+            path_skl = path_root + f_.replace("_depth.png","_fit2d.jpg") # 可视化2D效果渲染数据
 
-            fx,fy,cx,cy = read_camera_intrinsics(path_intrinsics)
+            fx,fy,cx,cy = read_camera_intrinsics(path_intrinsics)# 相机的内参
 
             Gesture_ = "NoneNone"
             try:
@@ -66,6 +65,7 @@ if __name__ == '__main__':
             img_depth_jt = img_depth.copy()
             img_jt = img.copy()
 
+            # 相机模型公式 应用，3d转为了2d投影点
             Draw_KeyPoints3D(img,Joint3D["joints"],fx,fy,cx,cy)
             Draw_KeyPoints3D(img_depth,Joint3D["joints"],fx,fy,cx,cy)
             Draw_Mesh3D(img_jt,Mesh3D,fx,fy,cx,cy,RGB_ = (245, 55, 133))
