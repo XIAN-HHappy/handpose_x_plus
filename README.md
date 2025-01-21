@@ -22,7 +22,7 @@
 * 5）相机内参 (camera Intrinsics : fx, fy, cx, cy)
 * 6）静态手势 (gesture)
 * 7）手部mask （hand mask）
-
+* 8) 室内&室外场景
 # 二、数据集解析
 
 ```bash
