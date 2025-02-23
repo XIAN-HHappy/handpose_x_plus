@@ -175,3 +175,43 @@ def Draw_Mesh3D(img,Mesh,fx,fy,cx,cy,RGB_ = (245, 125, 35)):
         mesh_list.append(area_)
     # 绘制mesh 二维网格
     cv2.fillPoly(img, mesh_list, RGB_)
+
+import cv2
+
+def resize_image_by_long_side(image, long_side_length):
+    """
+    根据指定的长边边长进行非形变缩放（保持宽高比）。
+
+    参数:
+        image: 输入图像（通过 cv2.imread 读取的图像）
+        long_side_length: 指定的长边边长
+    返回:
+        resized_image: 缩放后的图像
+    """
+    # 获取原始图像的宽高
+    height, width = image.shape[:2]
+
+    # 计算原始宽高比
+    aspect_ratio = width / height
+
+    # 根据长边调整宽高
+    if width > height:  # 宽是长边
+        new_width = long_side_length
+        new_height = int(new_width / aspect_ratio)
+    else:  # 高是长边
+        new_height = long_side_length
+        new_width = int(new_height * aspect_ratio)
+
+    # 使用 OpenCV 的 resize 函数进行缩放
+    resized_image = cv2.resize(image, (new_width, new_height), interpolation=cv2.INTER_AREA)
+
+    return resized_image
+
+
+
+    # return resized_image
+    # # 显示原始图像和缩放后的图像
+    # cv2.imshow("Original Image", image)
+    # cv2.imshow("Resized Image", resized_image)
+    # cv2.waitKey(0)
+    # cv2.destroyAllWindows()

@@ -1,11 +1,5 @@
 # handpose X plus
 
-# 定期分享最新AIGC消息 & 项目情况
-
-### 加入 “DataBall - X 数据球 (free)” 知识星球,获取样品数据集 1000+
-
-<img src="doc/zsxq.jpg" width="50%" alt="知识星球">
-
 
 * [演示完整视频](https://www.bilibili.com/video/BV1HTYReYEBj/?share_source=copy_web&vd_source=014da96a262b45c24251d22ed2727fba)  
 
@@ -28,6 +22,19 @@
 ```bash
 python read_datas.py
 ```
+
+# 三、数据增强
+
+```bash
+python read_datas_augmentation.py
+```
+###数据增强样例
+
+<img src="samples/s1.png" width="50%" alt="知识星球">
+
+### 加入 “DataBall - X 数据球 (free)” 知识星球,获取样品数据集 1000+
+
+<img src="doc/zsxq.jpg" width="50%" alt="知识星球">
 
 ### 即将发布 Coming Soon
 ### 联系方式 （Contact）  

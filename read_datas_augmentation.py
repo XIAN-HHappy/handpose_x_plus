@@ -8,7 +8,7 @@ import cv2
 import numpy as np
 import copy
 from utils import read_obj,read_camera_intrinsics,Draw_KeyPoints3D,Draw_Mesh3D,read_gesture
-from utils import img_agu_crop
+from utils import img_agu_crop,resize_image_by_long_side
 import random
 if __name__ == '__main__':
 
@@ -19,10 +19,10 @@ if __name__ == '__main__':
     path_bkgd = "./bkgt/"
     bkgt_files_list = os.listdir(path_bkgd)
 
-    for f_ in os.listdir(path_bkgd):
-        img_ = cv2.imread(path_bkgd + f_)
-        img_ = resize_image_by_long_side(img_,640)
-        cv2.imwrite(path_bkgd + f_,img_)
+    # for f_ in os.listdir(path_bkgd):
+    #     img_ = cv2.imread(path_bkgd + f_)
+    #     img_ = resize_image_by_long_side(img_,640)
+    #     cv2.imwrite(path_bkgd + f_,img_)
     #---------------------
     for doc_  in os.listdir(path_s):
 
