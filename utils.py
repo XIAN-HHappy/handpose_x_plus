@@ -1,12 +1,31 @@
 #-*-coding:utf-8-*-
 # date:2024-01-24
-# Author: DataBall - XIAN
+# Author: XIAN
 # function: utils
 
 import os
 import numpy as np
 import cv2
 import copy
+import random
+'''
+ 数据增强 crop
+'''
+def img_agu_crop(img_):
+    scale_ = int(min(img_.shape[0],img_.shape[1])/20)
+    # scale_ = 5
+    x1 = max(0,random.randint(0,scale_))
+    y1 = max(0,random.randint(0,scale_))
+    x2 = min(img_.shape[1]-1,img_.shape[1] - random.randint(0,scale_))
+    y2 = min(img_.shape[0]-1,img_.shape[1] - random.randint(0,scale_))
+    # print(img_.shape,'-crop- : ',x1,y1,x2,y2)
+    try:
+        img_crop_ = img_[y1:y2,x1:x2,:]
+    except:
+        img_crop_ = img_
+        print("img_agu_crop error ")
+    return img_crop_
+
 '''
 function：读取 obj 信息
 '''
