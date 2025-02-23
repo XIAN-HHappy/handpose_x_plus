@@ -19,6 +19,10 @@ if __name__ == '__main__':
     path_bkgd = "./bkgt/"
     bkgt_files_list = os.listdir(path_bkgd)
 
+    for f_ in os.listdir(path_bkgd):
+        img_ = cv2.imread(path_bkgd + f_)
+        img_ = resize_image_by_long_side(img_,640)
+        cv2.imwrite(path_bkgd + f_,img_)
     #---------------------
     for doc_  in os.listdir(path_s):
 
