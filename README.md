@@ -41,7 +41,7 @@ python read_datas_augmentation.py
 4)完整数据集获取请加入：DataBall-X数据球(vip)
 ```
 
-- [x] [FreiHAND](https://github.com/XIAN-HHappy/handpose_x_plus/script/FreiHAND)
+- [x] [FreiHAND](https://github.com/XIAN-HHappy/handpose_x_plus/tree/main/script/FreiHAND)
 - [ ] [handposeX_3D_rgb_v1]
 - [ ] [HO3D]
 - [ ] [InterHand26M]
