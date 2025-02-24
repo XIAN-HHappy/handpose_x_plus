@@ -83,6 +83,11 @@ python read_datas_augmentation.py
 }
 ```
 ## 4.2 FreiHAND 数据集示例
+#### 脚本运行
+```
+cd script/FreiHAND
+python read_handposex_json.py
+```
 <img src="samples/f1.jpg" width="50%" alt="知识星球">
 
 
