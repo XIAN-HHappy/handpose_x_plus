@@ -65,7 +65,10 @@ python read_datas_augmentation.py
 官方项目：https://github.com/lmb-freiburg/freihand
 ```
 
-## 4.1 handposeX json 格式示例：
+## 1.2 FreiHAND 数据集
+
+* 数据量：32560
+* FreiHAND 采用handposeX json 格式，示例如下：
 ```bash
 {
  "author": "XIAN",
@@ -97,8 +100,7 @@ python read_datas_augmentation.py
  ]
 }
 ```
-## 4.2 FreiHAND 数据集
-* 数据量：32560
+
 #### 脚本运行
 ```
 cd script/FreiHAND
