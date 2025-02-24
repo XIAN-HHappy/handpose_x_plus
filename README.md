@@ -28,7 +28,7 @@
 - [ ] [HO3D_v3]
 - [ ] [InterHand26M]
 
-### 1.1 handpose X plus 数据集
+## 1.1 handpose X plus 数据集
 * 数据量：32560
 
 * [handpose X plus - 演示完整视频](https://www.bilibili.com/video/BV1HTYReYEBj/?share_source=copy_web&vd_source=014da96a262b45c24251d22ed2727fba)  
