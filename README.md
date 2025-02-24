@@ -28,11 +28,65 @@ python read_datas.py
 ```bash
 python read_datas_augmentation.py
 ```
-###数据增强样例
+#### 数据增强样例
 
 <img src="samples/s1.png" width="50%" alt="知识星球">
 
-### 加入 “DataBall - X 数据球 (free)” 知识星球,获取样品数据集 1000+
+# 四、数据集整合
+```bash
+注意：
+1)为了方便使用，按照 handposeX json 自定义格式存储
+2)使用常见依赖库进行调用,降低数据集使用难度。
+3)部分数据集获取请加入：DataBall-X数据球(free)
+4)完整数据集获取请加入：DataBall-X数据球(vip)
+```
+
+- [x] [FreiHAND](https://github.com/XIAN-HHappy/handpose_x_plus/script/FreiHAND)
+- [ ] [handposeX_3D_rgb_v1]
+- [ ] [HO3D]
+- [ ] [InterHand26M]
+
+```bash
+官方项目：https://github.com/lmb-freiburg/freihand
+```
+
+## 4.1 handposeX json 格式示例：
+```bash
+{
+ "author": "XIAN",
+ "img_name:": "",
+ "cx": 112.0,
+ "cy": 112.0,
+ "fx": 388.9018310596544,
+ "fy": 388.71231836584275,
+ "hands": [
+  {
+   "label": "right",
+   "joint3d": [
+    [
+     29.402047395706177,
+     -27.920207008719444,
+     587.0807766914368
+    ],
+    ······
+   ],
+   "vertex3d": [
+    [
+     10.056010007858276,
+     29.915300235152245,
+     -626.9440693855286
+    ],
+    ······
+   ]
+  }
+ ]
+}
+```
+## 4.2 FreiHAND 数据集示例
+<img src="samples/f1.jpg" width="50%" alt="知识星球">
+
+
+#### 加入 “DataBall - X 数据球” 知识星球,获取数据集
 
 <img src="doc/zsxq.jpg" width="50%" alt="知识星球">
 
