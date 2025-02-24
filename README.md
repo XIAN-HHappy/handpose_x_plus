@@ -1,13 +1,42 @@
 # handpose X plus
 
+#### 该项目目的是为了构建低成本&高效率的三维手势交互产品，在智能眼镜等交互产品中广泛应用。
 
-* [演示完整视频](https://www.bilibili.com/video/BV1HTYReYEBj/?share_source=copy_web&vd_source=014da96a262b45c24251d22ed2727fba)  
+
+| 开发计划        | 内容 | 数据量 | 状态 |
+|---------------------------|-----------|------|-----------|
+| 数据集整合     | handposeX_3D_rgb_v1 |  1k+  |    持续增加中    |
+| 数据集整合     | handpose X plus    | 1018 | √        |
+| 数据集整合     | FreiHAND           | 32560   | √        |
+| 数据集整合     | HO3D_v3           |    |     进行中    |
+| 数据集整合     | InterHand26M           |    |         |
+| 基础 PipeLine  | 基础版本模型   |    |    进行中     |
+
+
+# 一、数据集整合
+
+```bash
+注意：
+1)为了方便使用，按照 handposeX json 自定义格式存储。
+2)使用常见依赖库进行调用,降低数据集使用难度。
+3)部分数据集获取请加入：DataBall-X数据球(free)
+4)完整数据集获取请加入：DataBall-X数据球(vip)
+```
+- [x] [handpose X plus]
+- [x] [FreiHAND](https://github.com/XIAN-HHappy/handpose_x_plus/tree/main/script/FreiHAND)
+- [ ] [handposeX_3D_rgb_v1]
+- [ ] [HO3D_v3]
+- [ ] [InterHand26M]
+
+### 1.1 handpose X plus 数据集
+* 数据量：32560
+
+* [handpose X plus - 演示完整视频](https://www.bilibili.com/video/BV1HTYReYEBj/?share_source=copy_web&vd_source=014da96a262b45c24251d22ed2727fba)  
 
 <img src="doc/demo.gif" width="100%" alt="知识星球">
 
-# 一、数据集介绍
-
-## 数据内容包括：
+```bash
+数据内容包括：
 
 * 1）rgb 图像 （rgb image）
 * 2）深度点云图像 (depth image)
@@ -17,34 +46,20 @@
 * 6）静态手势 (gesture)
 * 7）手部mask （hand mask）
 * 8）室内&室外场景
-# 二、数据集解析
-
+```
 ```bash
+数据集解析,脚本运行如下:
 python read_datas.py
 ```
 
-# 三、数据增强
-
-```bash
-python read_datas_augmentation.py
-```
 #### 数据增强样例
 
 <img src="samples/s1.png" width="50%" alt="知识星球">
 
-# 四、数据集整合
 ```bash
-注意：
-1)为了方便使用，按照 handposeX json 自定义格式存储
-2)使用常见依赖库进行调用,降低数据集使用难度。
-3)部分数据集获取请加入：DataBall-X数据球(free)
-4)完整数据集获取请加入：DataBall-X数据球(vip)
+数据增强,脚本运行如下:
+python read_datas_augmentation.py
 ```
-
-- [x] [FreiHAND](https://github.com/XIAN-HHappy/handpose_x_plus/tree/main/script/FreiHAND)
-- [ ] [handposeX_3D_rgb_v1]
-- [ ] [HO3D]
-- [ ] [InterHand26M]
 
 ```bash
 官方项目：https://github.com/lmb-freiburg/freihand
@@ -82,19 +97,28 @@ python read_datas_augmentation.py
  ]
 }
 ```
-## 4.2 FreiHAND 数据集示例
+## 4.2 FreiHAND 数据集
+* 数据量：32560
 #### 脚本运行
 ```
 cd script/FreiHAND
 python read_handposex_json.py
 ```
+#### 示例
 <img src="samples/f1.jpg" width="50%" alt="知识星球">
-
 
 #### 加入 “DataBall - X 数据球” 知识星球,获取数据集
 
 <img src="doc/zsxq.jpg" width="50%" alt="知识星球">
 
+
+
+
 ### 即将发布 Coming Soon
 ### 联系方式 （Contact）  
 * E-mails: 305141918@qq.com   
+
+
+####  谢谢支持 a cup of coffee
+
+<img src="samples\coffee.png" width="30%" alt="">
