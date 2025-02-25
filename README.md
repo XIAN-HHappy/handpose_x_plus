@@ -8,8 +8,8 @@
 | 数据集整合     | handposeX_3D_rgb_v1 |  1k+  |    持续增加中    |
 | 数据集整合     | handpose X plus    | 1018 | √        |
 | 数据集整合     | FreiHAND           | 32560   | √        |
-| 数据集整合     | HO3D_v3           |    |     进行中    |
-| 数据集整合     | InterHand26M           |    |         |
+| 数据集整合     | HO3D_v3           |  75663  |  √     |
+| 数据集整合     | InterHand26M           |    | 进行中     |
 | 基础 PipeLine  | 基础版本模型   |    |    进行中     |
 
 
@@ -109,8 +109,23 @@ python read_handposex_json.py
 #### 示例
 <img src="samples/f1.jpg" width="50%" alt="知识星球">
 
-#### 加入 “DataBall - X 数据球” 知识星球,获取数据集
+## 1.3 HO3D_v3 数据集
+* 数据量 75663
 
+```bash
+官方项目地址：https://github.com/shreyashampali/ho3d
+```
+#### 脚本运行
+```
+cd script/HO3D_v3
+python read_handposex_json_HO3D_v3.py
+```
+#### 示例
+<img src="samples/h1.jpg" width="50%" alt="">
+
+
+-----------------------------------
+#### 加入 “DataBall - X 数据球” 知识星球,获取数据集
 <img src="doc/zsxq.jpg" width="50%" alt="知识星球">
 
 
