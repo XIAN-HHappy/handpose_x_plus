@@ -2,15 +2,18 @@
 
 #### 该项目目的是为了构建低成本&高效率的三维手势交互产品，在智能眼镜等交互产品中广泛应用。
 
+* handposeX json 格式 简称： “hpx json 格式”
+* handposeX json 格式数据加入知识星球：DataBall - X 数据球(free)
 
-| 开发计划        | 内容 | 数据量 | 状态 |
-|---------------------------|-----------|------|-----------|
-| 数据集整合     | handposeX_3D_rgb_v1 |  1k+  |    持续增加中    |
-| 数据集整合     | handpose X plus    | 1018 | √        |
-| 数据集整合     | FreiHAND           | 32560   | √        |
-| 数据集整合     | HO3D_v3           |  75663  |  √     |
-| 数据集整合     | InterHand26M           |    | 进行中     |
-| 基础 PipeLine  | 基础版本模型   |    |    进行中     |
+
+| 开发计划        | 内容 | 数据量 |hpx格式样例-release | 状态 |
+|-----------------|----------|-----------|------|-----------|
+| 数据集整合 | handposeX_3D_rgb_v1 |  1k+  ||    持续增加中    |
+| 数据集整合 | handpose X plus    | 1018 |√ | √        |
+| 数据集整合 | FreiHAND           | 32560   |√ | √        |
+| 数据集整合 | HO3D_v3           |  75663  |√ |  √     |
+| 数据集整合 | InterHand26M 5fps  |    | | 进行中     |
+| 基础 PipeLine  | 基础版本模型   |    ||    进行中     |
 
 
 # 一、数据集整合
@@ -25,7 +28,7 @@
 - [x] [handpose X plus]
 - [x] [FreiHAND](https://github.com/XIAN-HHappy/handpose_x_plus/tree/main/script/FreiHAND)
 - [ ] [handposeX_3D_rgb_v1]
-- [ ] [HO3D_v3]
+- [x] [HO3D_v3]
 - [ ] [InterHand26M]
 
 ## 1.1 handpose X plus 数据集
@@ -103,6 +106,7 @@ python read_datas_augmentation.py
 
 #### 脚本运行
 ```
+# 下载 handposeX json 格式数据集放在根目录
 cd script/FreiHAND
 python read_handposex_json.py
 ```
@@ -117,11 +121,27 @@ python read_handposex_json.py
 ```
 #### 脚本运行
 ```
+# 下载 handposeX json 格式数据集放在根目录
 cd script/HO3D_v3
 python read_handposex_json_HO3D_v3.py
 ```
 #### 示例
 <img src="samples/h1.jpg" width="50%" alt="">
+
+## 1.4 InterHand26M 数据集
+* InterHand2.6M_5fps_batch1-20250302-min 样本量
+* 更多数据集加入知识星球：“DataBall - X 数据球（vip）”
+```bash
+官方项目地址：https://mks0601.github.io/InterHand2.6M/
+```
+#### 脚本运行
+```
+# 下载 handposeX json 格式数据集放在根目录
+cd script/InterHand26M
+python read_InterHand26M.py
+```
+#### 示例
+<img src="samples/i1.gif" width="50%" alt="">
 
 
 -----------------------------------
