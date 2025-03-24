@@ -9,10 +9,11 @@
 | 开发计划        | 内容 | 数据量 |hpx格式样例-release | 状态 |
 |-----------------|----------|-----------|------|-----------|
 | 数据集整合 | handposeX_3D_rgb_v1 |  1k+  ||    持续增加中    |
-| 数据集整合 | handpose X plus    | 1018 |√ | √        |
+| 数据集整合 | handpose X plus    | 1018 (商业数据30w+)|√ | √  |
 | 数据集整合 | FreiHAND           | 32560   |√ | √        |
 | 数据集整合 | HO3D_v3           |  75663  |√ |  √     |
 | 数据集整合 | InterHand26M 5fps  |    | | 进行中     |
+| 数据集整合 | TACO 工具协同 |    | | 进行中     |
 | 基础 PipeLine  | 基础版本模型   |    ||    进行中     |
 
 
@@ -30,6 +31,7 @@
 - [ ] [handposeX_3D_rgb_v1]
 - [x] [HO3D_v3]
 - [ ] [InterHand26M]
+- [ ] [TACO 工具协同]
 
 ## 1.1 handpose X plus 数据集
 * 数据量：32560
@@ -129,7 +131,7 @@ python read_handposex_json_HO3D_v3.py
 <img src="samples/h1.jpg" width="50%" alt="">
 
 ## 1.4 InterHand26M 数据集
-* InterHand2.6M_5fps_batch1-20250302-min 样本量
+* InterHand2.6M_5fps_batch1-20250302-min
 * 更多数据集加入知识星球：“DataBall - X 数据球（vip）”
 ```bash
 官方项目地址：https://mks0601.github.io/InterHand2.6M/
@@ -143,6 +145,28 @@ python read_InterHand26M.py
 #### 示例
 <img src="samples/i1.gif" width="50%" alt="">
 
+## 1.5 TACO 数据集
+* 官方项目地址：https://github.com/leolyliu/TACO-Instructions
+```bash
+@inproceedings{liu2024taco,
+  title={Taco: Benchmarking generalizable bimanual tool-action-object understanding},
+  author={Liu, Yun and Yang, Haolin and Si, Xu and Liu, Ling and Li, Zipeng and Zhang, Yuxiang and Liu, Yebin and Yi, Li},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={21740--21751},
+  year={2024}
+}
+```
+
+#### 脚本运行
+```
+# 下载 handposeX json 格式数据集放在根目录
+cd script/TACO
+python read_taco.py
+```
+
+#### 示例（第一人称视角）
+
+<img src="samples/taco1.gif" width="50%" alt="">
 
 -----------------------------------
 #### 加入 “DataBall - X 数据球” 知识星球,获取数据集
