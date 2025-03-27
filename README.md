@@ -12,8 +12,8 @@
 | 数据集整合 | handpose X plus    | 1018 (商业数据30w+)|√ | √  |
 | 数据集整合 | FreiHAND           | 32560   |√ | √        |
 | 数据集整合 | HO3D_v3           |  75663  |√ |  √     |
-| 数据集整合 | InterHand26M 5fps  |    | | 进行中     |
-| 数据集整合 | TACO 工具协同 |    | | 进行中     |
+| 数据集整合 | InterHand26M 5fps  |    | √| 进行中     |
+| 数据集整合 | TACO 工具协同 |  30 w +  |√ |   √   |
 | 基础 PipeLine  | 基础版本模型   |    ||    进行中     |
 
 
@@ -31,7 +31,7 @@
 - [ ] [handposeX_3D_rgb_v1]
 - [x] [HO3D_v3]
 - [ ] [InterHand26M]
-- [ ] [TACO 工具协同]
+- [x] [TACO 工具协同]
 
 ## 1.1 handpose X plus 数据集
 * 数据量：32560
