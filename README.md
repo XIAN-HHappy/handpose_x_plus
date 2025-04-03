@@ -8,7 +8,7 @@
 
 | 开发计划        | 内容 | 数据量 |hpx格式样例-release | 状态 |
 |-----------------|----------|-----------|------|-----------|
-| 数据集整合 | handposeX_3D_rgb_v1 |  1k+  ||    持续增加中    |
+| 数据集整合 | handposeX_3D_rgb_v1 |  2k+  (亚洲、非洲、欧洲、印度等)||    持续增加中    |
 | 数据集整合 | handpose X plus    | 1018 (商业数据30w+)|√ | √  |
 | 数据集整合 | FreiHAND           | 32560   |√ | √        |
 | 数据集整合 | HO3D_v3           |  75663  |√ |  √     |
@@ -28,7 +28,7 @@
 ```
 - [x] [handpose X plus]
 - [x] [FreiHAND](https://github.com/XIAN-HHappy/handpose_x_plus/tree/main/script/FreiHAND)
-- [ ] [handposeX_3D_rgb_v1]
+- [x] [handposeX_3D_rgb_v1]
 - [x] [HO3D_v3]
 - [ ] [InterHand26M]
 - [x] [TACO 工具协同]
@@ -167,6 +167,20 @@ python read_taco.py
 #### 示例（第一人称视角）
 
 <img src="samples/taco1.gif" width="50%" alt="">
+
+
+## 1.6 handposeX_3D_rgb_v1 数据集
+
+#### 脚本运行
+```
+# 下载 handposeX json 格式数据集放在根目录
+cd script/handposex_3d_rgb
+python read_handposex_3d_rgb.py
+```
+
+#### 示例（非洲人）
+
+<img src="samples/ff1.gif" width="50%" alt="">
 
 -----------------------------------
 #### 加入 “DataBall - X 数据球” 知识星球,获取数据集
